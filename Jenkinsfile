@@ -1,11 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3-alpine' 
-            args '-v /root/.m2:/root/.m2' 
-        }
-    }
-    stages {
+  environment {
+    registry = "nairobin/javaapp-project"
+    registryCredential = 'dockerhub'
+  }
+  agent any
+  stages {
     stage('Building image') {
       steps{
         script {
