@@ -11,6 +11,11 @@ pipeline {
         git 'https://github.com/NaiRoBin/java-pipeline.git'
       }
     }
+    stage('Build') {
+       steps {
+         sh 'mvn -B -DskipTests clean package'
+       }
+    }
     stage('Building image') {
       steps{
         script {
