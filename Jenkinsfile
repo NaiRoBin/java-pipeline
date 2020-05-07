@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "nairobin/java-pipeline"
-    registryCredential = "dockerhub"
+    registryCredential = 'dockerhub'
   }
   agent any
   stages {
