@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "nairobin/java-pipeline"
-    registryCredential = 'dockerhub'
+    registryCredential = ‘dockerhub’
   }
   agent any
   stages {
@@ -10,8 +10,6 @@ pipeline {
         git 'https://github.com/NaiRoBin/java-pipeline.git'
       }
     }
-  }
-  stages {
     stage('Building image') {
       steps{
         script {
