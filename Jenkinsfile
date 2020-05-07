@@ -34,7 +34,8 @@ pipeline {
     }
     stage('Cleaning up') {
       steps{
-        sh "docker container run -it --publish 8081:8080 dockerImage"
+        sh "docker container run -it --publish 8081:8080 docker.build registry + \":$BUILD_NUMBER\""
+        "
       }
     }
   }
