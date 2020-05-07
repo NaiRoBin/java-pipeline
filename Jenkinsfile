@@ -32,10 +32,6 @@ pipeline {
         }
       }
     }
-    stage('Cleaning up') {
-      steps{
-        
-      }
-    }
+   
   }
 }
